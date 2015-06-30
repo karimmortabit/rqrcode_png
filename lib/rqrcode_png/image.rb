@@ -1,6 +1,6 @@
 module RQRCodePNG
   class Image
-    BLUE = ::ChunkyPNG::Color::PREDEFINED_COLORS[:blue]
+    BLUE = ::ChunkyPNG::Color.rgb(37,52,66)
     WHITE = ::ChunkyPNG::Color::WHITE	
     TRANSPARENT = ::ChunkyPNG::Color::TRANSPARENT	
 
