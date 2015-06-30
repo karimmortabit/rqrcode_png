@@ -1,6 +1,6 @@
 module RQRCodePNG
   class Image
-    BLACK = ::ChunkyPNG::Color::BLACK
+    BLUE = ::ChunkyPNG::Color::PREDEFINED_COLORS[:blue]
     WHITE = ::ChunkyPNG::Color::WHITE	
     TRANSPARENT = ::ChunkyPNG::Color::TRANSPARENT	
 
@@ -12,7 +12,7 @@ module RQRCodePNG
     def render bg_color = WHITE
       png = blank_img(bg_color)
       @sequence.dark_squares_only do |x, y|
-        png[y + @sequence.border_width(), x + @sequence.border_width()] = BLACK
+        png[y + @sequence.border_width(), x + @sequence.border_width()] = BLUE
       end
       return png
     end
